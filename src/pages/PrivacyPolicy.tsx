@@ -2,95 +2,198 @@ import { ArrowLeft } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
 import PageLayout from '@/components/PageLayout';
+
 const PrivacyPolicy = () => {
-  // Scroll to top on mount
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  return <PageLayout>
+
+  return (
+    <PageLayout>
       <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="container mx-auto">
           <div className="max-w-4xl mx-auto">
             <Link to="/" className="inline-flex items-center text-gray-500 hover:text-gray-700 mb-6 transition-colors">
               <ArrowLeft className="mr-2 h-4 w-4" />
-              Back to Home
+              Retour à l'accueil
             </Link>
             
-            <h1 className="text-4xl font-bold mb-8">Privacy Policy</h1>
-            
-            <div className="prose prose-lg max-w-none">
-              <p className="text-gray-600 mb-6">Last updated: April 11, 2025</p>
+            <h1 className="text-4xl font-bold mb-8 text-vet-dark">Conditions d'Utilisation</h1>
+
+            {/* Client Terms */}
+            <div className="bg-blue-50 p-6 rounded-lg mb-8">
+              <h2 className="text-2xl font-bold text-vet-dark mb-6">CONDITIONS D'UTILISATION - CLIENTS</h2>
               
-              <h2 className="text-2xl font-semibold mt-8 mb-4">1. Introduction</h2>
-              <p className="text-gray-600 mb-4">
-                At WRLDS Technologies ("we," "our," or "us"), we respect your privacy and are committed to protecting your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services.
-              </p>
+              <div className="space-y-6 text-gray-700">
+                <div>
+                  <h3 className="text-lg font-semibold mb-2">1. RESPONSABILITÉ</h3>
+                  <p>L'application n'est pas responsable de la qualité des tests médicaux.</p>
+                </div>
+
+                <div>
+                  <h3 className="text-lg font-semibold mb-2">2. OBJET</h3>
+                  <p>Les présentes conditions générales d'utilisation (CGU) régissent l'utilisation de la plateforme de laboratoires d'analyses médicales.</p>
+                </div>
+
+                <div>
+                  <h3 className="text-lg font-semibold mb-2">3. INSCRIPTION ET COMPTE UTILISATEUR</h3>
+                  <ul className="list-disc pl-6 space-y-1">
+                    <li>L'inscription est gratuite et réservée aux personnes majeures</li>
+                    <li>Les informations fournies doivent être exactes et à jour</li>
+                    <li>Vous êtes responsable de la confidentialité de vos identifiants</li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h3 className="text-lg font-semibold mb-2">4. SERVICES PROPOSÉS</h3>
+                  <ul className="list-disc pl-6 space-y-1">
+                    <li>Recherche de laboratoires d'analyses médicales</li>
+                    <li>Prise de rendez-vous en ligne</li>
+                    <li>Accès aux résultats d'analyses</li>
+                    <li>Service de prélèvement à domicile</li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h3 className="text-lg font-semibold mb-2">5. PROTECTION DES DONNÉES</h3>
+                  <ul className="list-disc pl-6 space-y-1">
+                    <li>Vos données personnelles sont protégées conformément au RGPD</li>
+                    <li>Les données médicales sont cryptées et sécurisées</li>
+                    <li>Vous disposez d'un droit d'accès, de rectification et de suppression</li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h3 className="text-lg font-semibold mb-2">6. RESPONSABILITÉS</h3>
+                  <ul className="list-disc pl-6 space-y-1">
+                    <li>La plateforme facilite la mise en relation avec les laboratoires</li>
+                    <li>Les analyses sont réalisées par des laboratoires agréés</li>
+                    <li>Nous ne sommes pas responsables des actes médicaux</li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h3 className="text-lg font-semibold mb-2">7. TARIFICATION</h3>
+                  <ul className="list-disc pl-6 space-y-1">
+                    <li>La consultation de la plateforme est gratuite</li>
+                    <li>Les tarifs des analyses sont fixés par les laboratoires</li>
+                    <li>Les modalités de paiement sont définies par chaque laboratoire</li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h3 className="text-lg font-semibold mb-2">8. MODIFICATION DES CGU</h3>
+                  <p>Ces conditions peuvent être modifiées à tout moment. Les utilisateurs en seront informés.</p>
+                </div>
+
+                <div>
+                  <h3 className="text-lg font-semibold mb-2">9. DROIT APPLICABLE</h3>
+                  <p>Les présentes CGU sont soumises au droit français.</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Vet/Lab Terms */}
+            <div className="bg-green-50 p-6 rounded-lg mb-8">
+              <h2 className="text-2xl font-bold text-vet-dark mb-6">CONDITIONS PROFESSIONNELLES - LABORATOIRES</h2>
               
-              <h2 className="text-2xl font-semibold mt-8 mb-4">2. Information We Collect</h2>
-              <p className="text-gray-600 mb-4">
-                We may collect personal information that you voluntarily provide to us when you:
-              </p>
-              <ul className="list-disc pl-6 mb-4 text-gray-600">
-                <li>Contact us through our website</li>
-                <li>Subscribe to our newsletter</li>
-                <li>Register for our services</li>
-                <li>Participate in our surveys or promotions</li>
+              <div className="space-y-6 text-gray-700">
+                <div>
+                  <h3 className="text-lg font-semibold mb-2">1. OBJET</h3>
+                  <p>Les présentes conditions professionnelles régissent l'utilisation de la plateforme par les laboratoires d'analyses médicales.</p>
+                </div>
+
+                <div>
+                  <h3 className="text-lg font-semibold mb-2">2. INSCRIPTION ET VALIDATION</h3>
+                  <ul className="list-disc pl-6 space-y-1">
+                    <li>L'inscription nécessite la fourniture de documents professionnels</li>
+                    <li>Validation des agréments et certifications</li>
+                    <li>Vérification de l'identité professionnelle</li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h3 className="text-lg font-semibold mb-2">3. OBLIGATIONS PROFESSIONNELLES</h3>
+                  <ul className="list-disc pl-6 space-y-1">
+                    <li>Respect des normes de qualité en vigueur</li>
+                    <li>Maintien des agréments et certifications</li>
+                    <li>Respect des délais de rendu des résultats</li>
+                    <li>Formation continue du personnel</li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h3 className="text-lg font-semibold mb-2">4. SERVICES DE LA PLATEFORME</h3>
+                  <ul className="list-disc pl-6 space-y-1">
+                    <li>Référencement sur la plateforme</li>
+                    <li>Gestion des rendez-vous en ligne</li>
+                    <li>Interface de communication avec les patients</li>
+                    <li>Outils de gestion des résultats</li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h3 className="text-lg font-semibold mb-2">5. RESPONSABILITÉS</h3>
+                  <ul className="list-disc pl-6 space-y-1">
+                    <li>Qualité des analyses et des résultats</li>
+                    <li>Respect de la confidentialité médicale</li>
+                    <li>Conformité aux réglementations sanitaires</li>
+                    <li>Assurance responsabilité civile professionnelle</li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h3 className="text-lg font-semibold mb-2">6. DONNÉES ET CONFIDENTIALITÉ</h3>
+                  <ul className="list-disc pl-6 space-y-1">
+                    <li>Protection des données patients selon le RGPD</li>
+                    <li>Cryptage des données médicales</li>
+                    <li>Traçabilité des accès aux données</li>
+                    <li>Audit de sécurité régulier</li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h3 className="text-lg font-semibold mb-2">7. TARIFICATION ET FACTURATION</h3>
+                  <ul className="list-disc pl-6 space-y-1">
+                    <li>Commission sur les prestations réalisées</li>
+                    <li>Facturation mensuelle</li>
+                    <li>Modalités de paiement définies contractuellement</li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h3 className="text-lg font-semibold mb-2">8. RÉSILIATION</h3>
+                  <ul className="list-disc pl-6 space-y-1">
+                    <li>Possibilité de résiliation à tout moment</li>
+                    <li>Préavis de 30 jours</li>
+                    <li>Conservation des données selon obligations légales</li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h3 className="text-lg font-semibold mb-2">9. DROIT APPLICABLE</h3>
+                  <p>Ces conditions sont soumises au droit français et aux réglementations sanitaires.</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Contact */}
+            <div className="bg-gray-50 p-6 rounded-lg">
+              <h2 className="text-xl font-bold text-vet-dark mb-4">Contact</h2>
+              <p className="text-gray-600 mb-4">Pour toute question concernant ces conditions:</p>
+              <ul className="list-none mb-4 text-gray-600">
+                <li className="mb-2"><strong>Email:</strong> VetDz@gmail.com</li>
+                <li className="mb-2"><strong>WhatsApp:</strong> +213 549 70 27 88</li>
               </ul>
-              <p className="text-gray-600 mb-4">
-                This information may include your name, email address, company name, phone number, and any other information you choose to provide.
+              <p className="text-gray-600 mt-6 font-medium">
+                En utilisant VetDz, vous reconnaissez avoir lu et accepté ces Conditions d'Utilisation.
               </p>
-              
-              <h2 className="text-2xl font-semibold mt-8 mb-4">3. How We Use Your Information</h2>
-              <p className="text-gray-600 mb-4">
-                We may use the information we collect for various purposes, including to:
-              </p>
-              <ul className="list-disc pl-6 mb-4 text-gray-600">
-                <li>Provide, operate, and maintain our services</li>
-                <li>Improve, personalize, and expand our services</li>
-                <li>Understand and analyze how you use our services</li>
-                <li>Develop new products, services, features, and functionality</li>
-                <li>Communicate with you about our services, updates, and other information</li>
-                <li>Process transactions and send related information</li>
-                <li>Find and prevent fraud</li>
-              </ul>
-              
-              <h2 className="text-2xl font-semibold mt-8 mb-4">4. Cookies and Tracking Technologies</h2>
-              <p className="text-gray-600 mb-4">
-                We may use cookies and similar tracking technologies to track activity on our website and store certain information. Cookies are files with a small amount of data that may include an anonymous unique identifier. You can instruct your browser to refuse all cookies or to indicate when a cookie is being sent.
-              </p>
-              
-              <h2 className="text-2xl font-semibold mt-8 mb-4">5. Third-Party Services</h2>
-              <p className="text-gray-600 mb-4">
-                We may use third-party services that collect, monitor, and analyze data to improve our services. These third parties have their own privacy policies addressing how they use such information.
-              </p>
-              
-              <h2 className="text-2xl font-semibold mt-8 mb-4">6. Data Retention</h2>
-              <p className="text-gray-600 mb-4">
-                We will retain your personal information only for as long as is necessary for the purposes set out in this Privacy Policy.
-              </p>
-              
-              <h2 className="text-2xl font-semibold mt-8 mb-4">7. Security</h2>
-              <p className="text-gray-600 mb-4">
-                The security of your data is important to us, but remember that no method of transmission over the Internet or method of electronic storage is 100% secure. While we strive to use commercially accePADble means to protect your personal information, we cannot guarantee its absolute security.
-              </p>
-              
-              <h2 className="text-2xl font-semibold mt-8 mb-4">8. Your Rights</h2>
-              <p className="text-gray-600 mb-4">
-                Depending on your location, you may have certain rights regarding your personal information, such as the right to access, correct, or delete your personal information.
-              </p>
-              
-              <h2 className="text-2xl font-semibold mt-8 mb-4">9. Changes to This Privacy Policy</h2>
-              <p className="text-gray-600 mb-4">
-                We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page. We will let you know via email and/or a prominent notice on our website prior to the change becoming effective.
-              </p>
-              
-              <h2 className="text-2xl font-semibold mt-8 mb-4">10. Contact Us</h2>
-              <p className="text-gray-600 mb-4">If you have any questions about this Privacy Policy, please contact us at hello@wrlds.com</p>
-              
             </div>
           </div>
         </div>
       </section>
-    </PageLayout>;
+    </PageLayout>
+  );
 };
+
 export default PrivacyPolicy;
